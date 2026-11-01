@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 here="$(cd "$(dirname "$0")" && pwd)"
-run() { "$here/latest-version.sh" "$1"; }
+run() { bash "$here/latest-version.sh" "$1"; }
 
 tmp="$(mktemp -d)"
 trap 'rm -rf "$tmp"' EXIT
